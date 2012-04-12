@@ -1,0 +1,8 @@
+1. The sql file has the DDL for tables to store disk info that we can collect periodically. If using SQL Server 2012, I think we should use the column store. I don't have a SQL Server 2012 instance for testing at the moment of writing;
+2. The PowerShell does disk info collection and store them in SQL Server. Pay attention to input file and SQL Server instance name.
+
+PowerShell uses psinfo ("psinfo -d volume"), part of Sysinternal tools that's easy to get and use (simply unzipping and put them in $PATH). The reason I used psinfo was that WMI can break on certain servers, which does not affect psinfo.
+
+For mount volume info, I don't know a way other than using WMI. See the second section of the script.
+
+Oh yeah, you need to be in Administrators group to run it against servers.
