@@ -1,0 +1,4 @@
+A list of Windows Admin utilities written in PowerShelll
+
+1. Create same directory on multiple computers;
+2. Gather disk information and store that in a SQL Server database. It uses psinfo ("psinfo -d volume"), a tool from Sysinternals
